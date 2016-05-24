@@ -11,10 +11,10 @@ public class ReadingListApplication extends WebMvcConfigurerAdapter {
     public static void main(String[] args) {
         SpringApplication.run(ReadingListApplication.class, args);
     }
-    
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-      registry.addRedirectViewController("/", "/readingList");
+        registry.addRedirectViewController("/", "/readingList");
     }
-    
+
 }

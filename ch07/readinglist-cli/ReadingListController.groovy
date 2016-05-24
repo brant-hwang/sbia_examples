@@ -2,28 +2,28 @@
 @RequestMapping("/")
 class ReadingListController {
 
-  String reader = "Craig"
+    String reader = "Craig"
 
-  @Autowired
-  ReadingListRepository readingListRepository
+    @Autowired
+    ReadingListRepository readingListRepository
 
-  @RequestMapping(method=RequestMethod.GET)
-  def readersBooks(Model model) {
-    List<Book> readingList = 
-        readingListRepository.findByReader(reader)
+    @RequestMapping(method = RequestMethod.GET)
+    def readersBooks(Model model) {
+        List<Book> readingList =
+                readingListRepository.findByReader(reader)
 
-    if (readingList != null) {
-      model.addAttribute("books", readingList)
+        if (readingList != null) {
+            model.addAttribute("books", readingList)
+        }
+
+        "readingList"
     }
 
-    "readingList"
-  }
-
-  @RequestMapping(method=RequestMethod.POST)
-  def addToReadingList(Book book) {
-    book.setReader(reader)
-    readingListRepository.save(book)
-    "redirect:/"
-  }
+    @RequestMapping(method = RequestMethod.POST)
+    def addToReadingList(Book book) {
+        book.setReader(reader)
+        readingListRepository.save(book)
+        "redirect:/"
+    }
 
 }

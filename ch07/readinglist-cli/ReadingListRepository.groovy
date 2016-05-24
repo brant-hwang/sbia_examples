@@ -1,7 +1,7 @@
 interface ReadingListRepository {
 
-	List<Book> findByReader(String reader)
+    List<Book> findByReader(String reader)
 
-	void save(Book book)
+    void save(Book book)
 
 }

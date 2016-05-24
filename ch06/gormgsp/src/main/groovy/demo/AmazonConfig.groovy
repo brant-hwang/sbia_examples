@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component
 @ConfigurationProperties("amazon")
 class AmazonConfig {
 
-  String associateId
-  
-  def getAssociateId() {
-    associateId
-  }
-  
+    String associateId
+
+    def getAssociateId() {
+        associateId
+    }
+
 }

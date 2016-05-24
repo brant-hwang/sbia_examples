@@ -1,7 +1,7 @@
 @Controller
 class Hi {
-	@RequestMapping("/hi")
-	def hi() {
-		"hiya"
-	}
+    @RequestMapping("/hi")
+    def hi() {
+        "hiya"
+    }
 }

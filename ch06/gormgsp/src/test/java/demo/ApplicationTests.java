@@ -12,9 +12,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class ApplicationTests {
 
-	@Test
-	@Ignore
-	public void contextLoads() {
-	}
+    @Test
+    @Ignore
+    public void contextLoads() {
+    }
 
 }
