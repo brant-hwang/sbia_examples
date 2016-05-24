@@ -37,7 +37,6 @@ public class ReadingListController {
         return "error";
     }
 
-
     @RequestMapping(method = RequestMethod.GET)
     public String readersBooks(Reader reader, Model model) {
         List<Book> readingList = readingListRepository.findByReader(reader);

@@ -1,8 +1,8 @@
 # 스프링 부트 인 액션 예제코드
 
 ## 실행환경
-- Java 1.7 이상
-- Grails 3.0.2
+- Java 1.8 이상
+- Grails 3.1.7
 - Firefox
 
 

@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Reading List</title>
-    <link rel="stylesheet" href="/style.css"></link>
+    <link rel="stylesheet" href="/css/style.css"></link>
 </head>
 
 <body>

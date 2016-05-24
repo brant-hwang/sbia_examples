@@ -1,15 +1,15 @@
 <html>
 <head>
     <title>Oops!</title>
-    <link rel="stylesheet" th:href="@{/style.css}"></link>
+    <link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 
 <html>
 <div class="errorPage">
     <span class="oops">Oops!</span><br/>
-    <img th:src="@{/MissingPage.png}"></img>
+    <img th:src="@{/images/MissingPage.png}"></img>
     <p>There seems to be a problem with the page you requested
-        (<span text="${path}">/readingList</span>).</p>
+        (<span th:text="${path}"></span>).</p>
     <p th:text="${'Details: ' + message}"></p>
 </div>
 </html>

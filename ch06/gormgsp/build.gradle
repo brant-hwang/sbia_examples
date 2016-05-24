@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.3.0.RELEASE'
+        springBootVersion = '1.3.5.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -19,8 +19,8 @@ jar {
     baseName = 'demo'
     version = '0.0.1-SNAPSHOT'
 }
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -35,7 +35,6 @@ dependencies {
   
     compile("org.grails:grails-gsp-spring-boot:1.0.0") 
 
-    
     compile("org.grails:grails-web-gsp-taglib:2.4.4")
     compile("org.grails:grails-validation:2.4.4")
 
@@ -46,10 +45,10 @@ dependencies {
 eclipse {
     classpath {
          containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7'
+         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '2.13'
 }

@@ -1,2 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
-/build/
+build/
+builds/
+.classpath
+.gradle/
+.project
+.settings/
+/bin/

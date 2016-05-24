@@ -15,7 +15,6 @@ import readinglist.ReadingListApplication;
 public class ReadingListApplicationTests {
 
     @Test
-    @Ignore
     public void contextLoads() {
     }
 

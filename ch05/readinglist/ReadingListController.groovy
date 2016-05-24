@@ -12,7 +12,7 @@ class ReadingListController {
         List<Book> readingList =
                 readingListRepository.findByReader(reader)
 
-        if (readingList != null) {
+        if (readingList) {
             model.addAttribute("books", readingList)
         }
 
