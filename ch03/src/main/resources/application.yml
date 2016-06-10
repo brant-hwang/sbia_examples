@@ -8,3 +8,8 @@ amazon:
 logging:
   level:
     root: DEBUG
+
+# Thymeleaf 템플릿 캐싱을 끄고 싶으면 아래 주석을 해제하세요.
+#spring:
+#  thymeleaf:
+#    cache: false

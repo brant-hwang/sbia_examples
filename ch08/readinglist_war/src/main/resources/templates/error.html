@@ -3,8 +3,7 @@
     <title>Oops!</title>
     <link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
-
-<html>
+<body>
 <div class="errorPage">
     <span class="oops">Oops!</span><br/>
     <img th:src="@{/images/MissingPage.png}"></img>
@@ -12,6 +11,5 @@
         (<span th:text="${path}"></span>).</p>
     <p th:text="${'Details: ' + message}"></p>
 </div>
-</html>
-
+</body>
 </html>
