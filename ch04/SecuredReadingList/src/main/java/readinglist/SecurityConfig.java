@@ -9,7 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 
 @EnableWebSecurity
@@ -40,13 +39,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService userDetailsService() {
         return new UserDetailsService() {
             @Override
-            public UserDetails loadUserByUsername(String username)
-                    throws UsernameNotFoundException {
-                UserDetails userDetails = readerRepository.findOne(username);
-                if (userDetails != null) {
-                    return userDetails;
-                }
-                throw new UsernameNotFoundException("User '" + username + "' not found.");
+            public UserDetails loadUserByUsername(String username) {
+                return readerRepository.findOne(username);
             }
         };
     }

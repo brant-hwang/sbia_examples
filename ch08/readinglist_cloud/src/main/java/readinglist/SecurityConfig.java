@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 
 @Configuration
@@ -34,14 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(new UserDetailsService() {
             @Override
-            public UserDetails loadUserByUsername(String username)
-                    throws UsernameNotFoundException {
-                Reader reader = readerRepository.findOne(username);
-                if (reader != null) {
-                    return reader;
-                } else {
-                    throw new UsernameNotFoundException("Could not find user: " + username);
-                }
+            public UserDetails loadUserByUsername(String username) {
+                return readerRepository.findOne(username);
             }
         });
     }
