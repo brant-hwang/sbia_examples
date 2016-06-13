@@ -61,5 +61,4 @@ public class MockMvcWebTests {
                 .andExpect(model().attribute("books", hasSize(0)))
                 .andExpect(model().attribute("amazonID", "habuma-20"));
     }
-
 }

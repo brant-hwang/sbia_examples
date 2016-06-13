@@ -30,19 +30,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureUrl("/login?error=true");
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService());
-    }
+@Override
+protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    auth.userDetailsService(userDetailsService());
+}
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return new UserDetailsService() {
-            @Override
-            public UserDetails loadUserByUsername(String username) {
-                return readerRepository.findOne(username);
-            }
-        };
-    }
+@Bean
+public UserDetailsService userDetailsService() {
+    return new UserDetailsService() {
+        @Override
+        public UserDetails loadUserByUsername(String username) {
+            return readerRepository.findOne(username);
+        }
+    };
+}
 
 }

@@ -1,26 +1,38 @@
 package readinglist;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@ConfigurationProperties("amazon")
 public class ReadingListController {
 
     private ReadingListRepository readingListRepository;
-    private AmazonProperties amazonConfig;
+    private AmazonProperties amazonProperties;
 
     @Autowired
-    public ReadingListController(ReadingListRepository readingListRepository, AmazonProperties amazonConfig) {
+    public ReadingListController(ReadingListRepository readingListRepository, AmazonProperties amazonProperties) {
         this.readingListRepository = readingListRepository;
-        this.amazonConfig = amazonConfig;
+        this.amazonProperties = amazonProperties;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/fail")
+    public void fail() {
+        throw new RuntimeException();
+    }
+
+    @ExceptionHandler(value = RuntimeException.class)
+    @ResponseStatus(value = HttpStatus.BANDWIDTH_LIMIT_EXCEEDED)
+    public String error() {
+        return "error";
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -29,7 +41,7 @@ public class ReadingListController {
         if (readingList != null) {
             model.addAttribute("books", readingList);
             model.addAttribute("reader", reader);
-            model.addAttribute("amazonID", amazonConfig.getAssociateId());
+            model.addAttribute("amazonID", amazonProperties.getAssociateId());
         }
         return "readingList";
     }
@@ -40,5 +52,4 @@ public class ReadingListController {
         readingListRepository.save(book);
         return "redirect:/";
     }
-
 }

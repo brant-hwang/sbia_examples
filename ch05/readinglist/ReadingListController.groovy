@@ -2,7 +2,7 @@
 @RequestMapping("/")
 class ReadingListController {
 
-    String reader = "Craig"
+    String reader = "craig"
 
     @Autowired
     ReadingListRepository readingListRepository
