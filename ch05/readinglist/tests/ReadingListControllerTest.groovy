@@ -12,7 +12,7 @@ class ReadingListControllerTest {
         List<Book> expectedList = new ArrayList<Book>()
         expectedList.add(new Book(
                 id: 1,
-                reader: "Craig",
+                reader: "craig",
                 isbn: "9781617292545",
                 title: "Spring Boot in Action",
                 author: "Craig Walls",
@@ -20,7 +20,7 @@ class ReadingListControllerTest {
         ))
 
         def mockRepo = mock(ReadingListRepository.class)
-        when(mockRepo.findByReader("Craig")).thenReturn(expectedList)
+        when(mockRepo.findByReader("craig")).thenReturn(expectedList)
 
         def controller = new ReadingListController(readingListRepository: mockRepo)
 
