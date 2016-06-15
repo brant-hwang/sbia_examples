@@ -3,7 +3,7 @@ error:
     enabled: false
 
 amazon:
-  associate_id: habuma-20
+  associateId: habuma-20
 
 logging:
   level:
@@ -16,8 +16,13 @@ endpoints:
   beans:
     sensitive: true
 
+  health:
+    enabled: true
+    sensitive: false
+
 management:
   context-path: /mgmt
+
   health:
     mongo:
       enabled: true

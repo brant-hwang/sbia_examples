@@ -3,7 +3,7 @@ error:
     enabled: false
 
 amazon:
-  associate_id: habuma-20
+  associateId: habuma-20
 
 logging:
   level:

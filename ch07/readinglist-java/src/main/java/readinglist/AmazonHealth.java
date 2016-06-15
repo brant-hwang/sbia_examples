@@ -19,5 +19,4 @@ public class AmazonHealth implements HealthIndicator {
             return Health.down().withDetail("reason", e.getMessage()).build();
         }
     }
-
 }
