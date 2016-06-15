@@ -3,7 +3,7 @@ error:
     enabled: false
 
 amazon:
-  associateId: habuma-20
+  associate_id: habuma-20
 
 spring:
   jpa:

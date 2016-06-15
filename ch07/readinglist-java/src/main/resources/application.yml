@@ -25,4 +25,4 @@ management:
 
   health:
     mongo:
-      enabled: true
+      enabled: false
