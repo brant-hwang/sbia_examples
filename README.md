@@ -2,7 +2,7 @@
 
 ## 실행환경
 - Java 1.8 이상
-- Grails 3.1.7
+- Grails 3.1.8
 - Firefox
 
 
@@ -14,3 +14,6 @@
 4. File -> Import -> Gradle (STS) -> Gradle (STS) Project 선택
 5. 클론한 소스코드 위치 지정 & Build Model 클릭
 6. sbia_examples가 Project에 표시되면 Finish 클릭
+
+
+## 7장의 액추에이터 코드는 3장의 자바코드와 5장의 그루비 코드 기반으로 작성되었습니다.

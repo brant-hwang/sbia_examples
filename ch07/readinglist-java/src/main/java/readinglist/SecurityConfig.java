@@ -8,9 +8,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-@EnableWebSecurity
+
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -21,7 +23,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/").access("hasRole('READER')")
-                .antMatchers("/mgmt/**").access("hasRole('ADMIN')")
                 .antMatchers("/**").permitAll()
                 .and()
                 .formLogin()
@@ -30,18 +31,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(
-            AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .userDetailsService(new UserDetailsService() {
-                    @Override
-                    public UserDetails loadUserByUsername(String username) {
-                        return readerRepository.findOne(username);
-                    }
-                })
-                .and()
-                .inMemoryAuthentication()
-                .withUser("manager").password("s3cr3t").roles("ADMIN");
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(new UserDetailsService() {
+            @Override
+            public UserDetails loadUserByUsername(String username)
+                    throws UsernameNotFoundException {
+                return readerRepository.findOne(username);
+            }
+        });
     }
 
 }

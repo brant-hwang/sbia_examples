@@ -38,7 +38,7 @@ dependencies {
     // Remote shell dependency transitively pulls in the Actuator dependency
     compile("org.springframework.boot:spring-boot-starter-remote-shell")
 
-    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    //compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

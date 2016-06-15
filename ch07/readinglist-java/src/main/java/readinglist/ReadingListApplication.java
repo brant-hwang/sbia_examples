@@ -9,10 +9,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.List;
 
 @SpringBootApplication
-public class Application extends WebMvcConfigurerAdapter {
+public class ReadingListApplication extends WebMvcConfigurerAdapter {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ReadingListApplication.class, args);
     }
 
     @Override
@@ -24,5 +24,4 @@ public class Application extends WebMvcConfigurerAdapter {
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
         argumentResolvers.add(new ReaderHandlerMethodArgumentResolver());
     }
-
 }

@@ -13,7 +13,7 @@ class ReadingListController {
 
     @Transactional
     def save(Book book) {
-        book.reader = 'Craig'
+        book.reader = 'craig'
         book.save flush: true
         redirect(action: "index")
     }

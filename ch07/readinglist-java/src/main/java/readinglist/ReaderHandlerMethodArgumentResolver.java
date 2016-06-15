@@ -23,7 +23,5 @@ public class ReaderHandlerMethodArgumentResolver implements HandlerMethodArgumen
 
         Authentication auth = (Authentication) webRequest.getUserPrincipal();
         return auth != null && auth.getPrincipal() instanceof Reader ? auth.getPrincipal() : null;
-
     }
-
 }

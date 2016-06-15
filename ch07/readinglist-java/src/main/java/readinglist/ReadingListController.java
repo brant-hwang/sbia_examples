@@ -1,9 +1,6 @@
 package readinglist;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.metrics.CounterService;
-import org.springframework.boot.actuate.metrics.GaugeService;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,22 +13,15 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@ConfigurationProperties("amazon")
 public class ReadingListController {
 
     private ReadingListRepository readingListRepository;
-    private AmazonProperties amazonConfig;
-    private CounterService counterService;
-    private GaugeService gaugeService;
+    private AmazonProperties amazonProperties;
 
     @Autowired
-    public ReadingListController(ReadingListRepository readingListRepository,
-                                 AmazonProperties amazonConfig, CounterService counterService,
-                                 GaugeService gaugeService) {
+    public ReadingListController(ReadingListRepository readingListRepository, AmazonProperties amazonProperties) {
         this.readingListRepository = readingListRepository;
-        this.amazonConfig = amazonConfig;
-        this.counterService = counterService;
-        this.gaugeService = gaugeService;
+        this.amazonProperties = amazonProperties;
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/fail")
@@ -45,14 +35,13 @@ public class ReadingListController {
         return "error";
     }
 
-
     @RequestMapping(method = RequestMethod.GET)
     public String readersBooks(Reader reader, Model model) {
         List<Book> readingList = readingListRepository.findByReader(reader);
         if (readingList != null) {
             model.addAttribute("books", readingList);
             model.addAttribute("reader", reader);
-            model.addAttribute("amazonID", amazonConfig.getAssociateId());
+            model.addAttribute("amazonID", amazonProperties.getAssociateId());
         }
         return "readingList";
     }
@@ -61,9 +50,6 @@ public class ReadingListController {
     public String addToReadingList(Reader reader, Book book) {
         book.setReader(reader);
         readingListRepository.save(book);
-        counterService.increment("books.saved");
-        gaugeService.submit("books.save.time", System.currentTimeMillis());
         return "redirect:/";
     }
-
 }

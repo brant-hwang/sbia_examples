@@ -16,9 +16,7 @@ public class Reader implements UserDetails {
 
     @Id
     private String username;
-
     private String fullname;
-
     private String password;
 
     public String getUsername() {
@@ -44,6 +42,8 @@ public class Reader implements UserDetails {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    // UserDetails methods
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
