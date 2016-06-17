@@ -3,13 +3,10 @@ package readinglist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.boot.actuate.metrics.GaugeService;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
 
@@ -30,17 +27,6 @@ public class ReadingListController {
         this.amazonConfig = amazonConfig;
         this.counterService = counterService;
         this.gaugeService = gaugeService;
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/fail")
-    public void fail() {
-        throw new RuntimeException();
-    }
-
-    @ExceptionHandler(value = RuntimeException.class)
-    @ResponseStatus(value = HttpStatus.BANDWIDTH_LIMIT_EXCEEDED)
-    public String error() {
-        return "error";
     }
 
     @RequestMapping(method = RequestMethod.GET)

@@ -27,18 +27,6 @@ public class ReadingListController {
         this.amazonConfig = amazonConfig;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/fail")
-    public void fail() {
-        throw new RuntimeException();
-    }
-
-    @ExceptionHandler(value = RuntimeException.class)
-    @ResponseStatus(value = HttpStatus.BANDWIDTH_LIMIT_EXCEEDED)
-    public String error() {
-        return "error";
-    }
-
-
     @RequestMapping(method = RequestMethod.GET)
     public String readersBooks(Reader reader, Model model) {
         List<Book> readingList = readingListRepository.findByReader(reader);
