@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SecuredReadingList.iml" filepath="$PROJECT_DIR$/.idea/modules/SecuredReadingList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SecuredReadingList_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SecuredReadingList_main.iml" group="SecuredReadingList" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SecuredReadingList_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SecuredReadingList_test.iml" group="SecuredReadingList" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UnsecuredReadingList.iml" filepath="$PROJECT_DIR$/.idea/modules/UnsecuredReadingList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UnsecuredReadingList_main.iml" filepath="$PROJECT_DIR$/.idea/modules/UnsecuredReadingList_main.iml" group="UnsecuredReadingList" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UnsecuredReadingList_test.iml" filepath="$PROJECT_DIR$/.idea/modules/UnsecuredReadingList_test.iml" group="UnsecuredReadingList" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ch02_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ch02_main.iml" group="ch02" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ch02_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ch02_test.iml" group="ch02" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ch03_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ch03_main.iml" group="ch03" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ch03_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ch03_test.iml" group="ch03" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/grails/readinglist/grails-app/domain/domain.iml" filepath="$PROJECT_DIR$/ch06/grails/readinglist/grails-app/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gormgsp.iml" filepath="$PROJECT_DIR$/.idea/modules/gormgsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gormgsp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gormgsp_main.iml" group="gormgsp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gormgsp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gormgsp_test.iml" group="gormgsp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grails.iml" filepath="$PROJECT_DIR$/.idea/modules/grails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch06/grails/readinglist/grails-app/grails-app.iml" filepath="$PROJECT_DIR$/ch06/grails/readinglist/grails-app/grails-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist-java.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist-java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist-java_main.iml" group="readinglist-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist-java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist-java_test.iml" group="readinglist-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_cloud.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_cloud_main.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_cloud_main.iml" group="readinglist_cloud" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_cloud_test.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_cloud_test.iml" group="readinglist_cloud" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_war.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_war_main.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_war_main.iml" group="readinglist_war" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readinglist_war_test.iml" filepath="$PROJECT_DIR$/.idea/modules/readinglist_war_test.iml" group="readinglist_war" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sbia_examples.iml" filepath="$PROJECT_DIR$/.idea/sbia_examples.iml" />
+    </modules>
+  </component>
+</project>

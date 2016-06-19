@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch02_main" target="1.8" />
+      <module name="ch02_test" target="1.8" />
+      <module name="ch03_main" target="1.8" />
+      <module name="ch03_test" target="1.8" />
+      <module name="gormgsp_main" target="1.8" />
+      <module name="gormgsp_test" target="1.8" />
+      <module name="grails_main" target="1.8" />
+      <module name="grails_test" target="1.8" />
+      <module name="readinglist-java_main" target="1.8" />
+      <module name="readinglist-java_test" target="1.8" />
+      <module name="readinglist_cloud_main" target="1.8" />
+      <module name="readinglist_cloud_test" target="1.8" />
+      <module name="readinglist_war_main" target="1.8" />
+      <module name="readinglist_war_test" target="1.8" />
+      <module name="SecuredReadingList_main" target="1.8" />
+      <module name="SecuredReadingList_test" target="1.8" />
+      <module name="UnsecuredReadingList_main" target="1.8" />
+      <module name="UnsecuredReadingList_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
